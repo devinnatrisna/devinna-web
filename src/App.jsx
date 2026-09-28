@@ -6,15 +6,17 @@ import Kontak from './components/Kontak';
 import Footer from './components/Footer';
 import './style.css';
 
-export default function App() {
+const App = () => {
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar />
       <Beranda />
       <Tentang />
       <Galeri />
       <Kontak />
       <Footer />
-    </>
+    </div>
   );
-}
+};
+
+export default App;

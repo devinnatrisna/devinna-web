@@ -7,16 +7,26 @@ const foto = [
   { src: '/foto/renang.jpeg', alt: 'Foto 6' },
 ];
 
-export default function Galeri() {
+const Galeri = () => {
   return (
-    <section id="galeri">
-      <h2>Galeri Foto</h2>
+    <section id="galeri" className="py-5">
+      <div className="container">
+        <h2 className="text-center mb-4">Galeri Foto</h2>
 
-      <div className="galeri-container">
-        {foto.map((item) => (
-          <img key={item.src} src={item.src} alt={item.alt} />
-        ))}
+        <div className="row g-3">
+          {foto.map((item) => (
+            <div className="col-12 col-md-4" key={item.src}>
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="foto-galeri rounded shadow-sm"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Galeri;
